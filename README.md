@@ -1,2 +1,2 @@
-# ssrq_lcp_conversion
-Conversion of SSRQ corpus for submission to the LiRI Corpus Platform.
+# SSRQ conversion for LCP
+Conversion of [SSRQ](https://zenodo.org/records/10878757) corpus for submission to the LiRI Corpus Platform ([LCP](https://lcp.linguistik.uzh.ch/)).
