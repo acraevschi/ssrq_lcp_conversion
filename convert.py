@@ -373,6 +373,7 @@ def remove_extra_spaces(text):
 a_file = extract_document_data(
     "SSRQ-SDS-FDS-editio-data-9247386/data/FR/FR_I_2_8/SSRQ-FR-I_2_8-208.17-1.xml"
 )
+a_file["annotations"][0]
 ### Need to check ranges on annotations ###
 
 
@@ -392,7 +393,8 @@ def convert_to_lcp(corpus_data, output_dir="output"):
     # Define annotation types based on the example data
     annotation_types = [
         "placeName",
-        "hi",
+        # "figure"
+        # "hi",
         "choice",
         "origDate",
         "term",
@@ -405,7 +407,7 @@ def convert_to_lcp(corpus_data, output_dir="output"):
     # Track unique attribute values for lookup tables
     attribute_lookups = {
         "placeName_ref": {},
-        "hi_rend": {},
+        # "hi_rend": {},
         "origDate_when": {},
         "term_ref": {},
         "persName_ref": {},
@@ -413,6 +415,12 @@ def convert_to_lcp(corpus_data, output_dir="output"):
         "note_text": {},
         "choice_alternative": {},
         "substitution_alternative": {},
+    }
+
+    base_ref_mappings = {
+        # Maps base ref to (id, text)
+        "placeName": {},
+        "persName": {},
     }
 
     # Open all required files
@@ -472,9 +480,27 @@ def convert_to_lcp(corpus_data, output_dir="output"):
 
             # Define headers based on annotation type
             if ann_type == "placeName":
-                annotation_writers[ann_type].writerow(["id", "char_range", "ref_id"])
-            elif ann_type == "hi":
-                annotation_writers[ann_type].writerow(["id", "char_range", "rend"])
+                ref = annotation.get("attributes", {}).get("ref", "")
+                text = annotation.get("text", "")
+
+                # Extract base reference (part before the dot)
+                base_ref = ref.split(".")[0] if "." in ref else ref
+
+                # Check if this base reference already exists
+                if base_ref in base_ref_mappings["placeName"]:
+                    # Use existing ID for this base reference
+                    ref_id = base_ref_mappings["placeName"][base_ref][0]
+                else:
+                    # Create new ID and store text for this base reference
+                    ref_id = len(base_ref_mappings["placeName"]) + 1
+                    base_ref_mappings["placeName"][base_ref] = (ref_id, text)
+
+                # Still store individual refs for lookup
+                attribute_lookups["placeName_ref"][ref] = (ref_id, text)
+
+                annotation_writers[ann_type].writerow([ann_id, char_range, ref_id])
+            # elif ann_type == "hi":
+            #     annotation_writers[ann_type].writerow(["id", "char_range", "rend"])
             elif ann_type == "choice":
                 annotation_writers[ann_type].writerow(
                     ["id", "char_range", "alternative_id"]
@@ -484,7 +510,25 @@ def convert_to_lcp(corpus_data, output_dir="output"):
             elif ann_type == "term":
                 annotation_writers[ann_type].writerow(["id", "char_range", "ref_id"])
             elif ann_type == "persName":
-                annotation_writers[ann_type].writerow(["id", "char_range", "ref_id"])
+                ref = annotation.get("attributes", {}).get("ref", "")
+                text = annotation.get("text", "")
+
+                # Extract base reference (part before the dot)
+                base_ref = ref.split(".")[0] if "." in ref else ref
+
+                # Check if this base reference already exists
+                if base_ref in base_ref_mappings["persName"]:
+                    # Use existing ID for this base reference
+                    ref_id = base_ref_mappings["persName"][base_ref][0]
+                else:
+                    # Create new ID and store text for this base reference
+                    ref_id = len(base_ref_mappings["persName"]) + 1
+                    base_ref_mappings["persName"][base_ref] = (ref_id, text)
+
+                # Still store individual refs for lookup
+                attribute_lookups["persName_ref"][ref] = (ref_id, text)
+
+                annotation_writers[ann_type].writerow([ann_id, char_range, ref_id])
             elif ann_type == "substitution":
                 annotation_writers[ann_type].writerow(
                     ["id", "char_range", "alternative_id"]
@@ -538,7 +582,10 @@ def convert_to_lcp(corpus_data, output_dir="output"):
 
         # Write headers for lookup tables
         for key, writer in lookup_writers.items():
-            writer.writerow([f"{key}_id", key.split("_")[-1]])
+            if key in ["placeName_ref", "persName_ref"]:
+                writer.writerow([f"{key}_id", key.split("_")[-1], "text"])
+            else:
+                writer.writerow([f"{key}_id", key.split("_")[-1]])
 
         # Initialize counters
         char_offset = 1  # Start from 1 as in LCP tutorial
@@ -621,7 +668,8 @@ def convert_to_lcp(corpus_data, output_dir="output"):
                     annotation_text = annotation["text"]
                     check_cond = text[start_offset:end_offset] == annotation_text
                     if not check_cond:
-                        # sometimes the text in the file is not the same as the annotation text because of the newline character
+                        # sometimes the text in the file is not the same as
+                        # the annotation text because of the newline character
                         check_cond = (
                             text.replace("\n", "")[start_offset:end_offset]
                             == annotation_text
@@ -634,19 +682,29 @@ def convert_to_lcp(corpus_data, output_dir="output"):
 
                     if ann_type == "placeName":
                         ref = annotation.get("attributes", {}).get("ref", "")
-                        ref_id = attribute_lookups["placeName_ref"].get(
-                            ref, len(attribute_lookups["placeName_ref"]) + 1
-                        )
-                        attribute_lookups["placeName_ref"][ref] = ref_id
+                        text = annotation.get("text", "")
+
+                        # Check if this ref already exists
+                        if ref in attribute_lookups["placeName_ref"]:
+                            ref_id = attribute_lookups["placeName_ref"][ref][
+                                0
+                            ]  # Get the ID
+                        else:
+                            ref_id = len(attribute_lookups["placeName_ref"]) + 1
+                            attribute_lookups["placeName_ref"][ref] = (
+                                ref_id,
+                                text,
+                            )  # Store both ID and text
+
                         annotation_writers[ann_type].writerow(
                             [ann_id, char_range, ref_id]
                         )
 
-                    elif ann_type == "hi":
-                        rend = annotation.get("attributes", {}).get("rend", "")
-                        annotation_writers[ann_type].writerow(
-                            [ann_id, char_range, rend]
-                        )
+                    # elif ann_type == "hi":
+                    #     rend = annotation.get("attributes", {}).get("rend", "")
+                    #     annotation_writers[ann_type].writerow(
+                    #         [ann_id, char_range, rend]
+                    #     )
 
                     elif ann_type == "choice":
                         alt_text = annotation.get("alternative_text", "")
@@ -676,10 +734,14 @@ def convert_to_lcp(corpus_data, output_dir="output"):
 
                     elif ann_type == "persName":
                         ref = annotation.get("attributes", {}).get("ref", "")
-                        ref_id = attribute_lookups["persName_ref"].get(
-                            ref, len(attribute_lookups["persName_ref"]) + 1
-                        )
-                        attribute_lookups["persName_ref"][ref] = ref_id
+                        text = annotation.get("text", "")
+
+                        if ref in attribute_lookups["persName_ref"]:
+                            ref_id = attribute_lookups["persName_ref"][ref][0]
+                        else:
+                            ref_id = len(attribute_lookups["persName_ref"]) + 1
+                            attribute_lookups["persName_ref"][ref] = (ref_id, text)
+
                         annotation_writers[ann_type].writerow(
                             [ann_id, char_range, ref_id]
                         )
@@ -740,8 +802,12 @@ def convert_to_lcp(corpus_data, output_dir="output"):
         # Write lookup table data
         for key, lookup_dict in attribute_lookups.items():
             if key in lookup_writers:
-                for value, value_id in lookup_dict.items():
-                    lookup_writers[key].writerow([value_id, value])
+                if key in ["placeName_ref", "persName_ref"]:
+                    for value, (value_id, text) in lookup_dict.items():
+                        lookup_writers[key].writerow([value_id, value, text])
+                else:
+                    for value, value_id in lookup_dict.items():
+                        lookup_writers[key].writerow([value_id, value])
 
         # Close lookup files
         for file in lookup_files.values():
@@ -767,7 +833,11 @@ def convert_to_lcp(corpus_data, output_dir="output"):
                     "date_electronic": {"type": "text", "nullable": True},
                     "date_print": {"type": "text", "nullable": True},
                     "orig_date_when": {"type": "text", "nullable": True},
-                    "canton": {"type": "text", "nullable": True},
+                    "canton": {
+                        "type": "categorical",
+                        "values": list(xml_files_by_subdir.keys()),
+                        "nullable": True,
+                    },
                 },
             },
             "Segment": {
@@ -790,17 +860,17 @@ def convert_to_lcp(corpus_data, output_dir="output"):
                     "ref": {"type": "text", "nullable": True},
                 },
             },
-            "Hi": {
-                "layerType": "span",
-                "anchoring": {"stream": True, "time": False, "location": False},
-                "attributes": {
-                    "rend": {
-                        "type": "categorical",
-                        "nullable": True,
-                        "values": ["sup"],  # Add more values
-                    },
-                },
-            },
+            # "Hi": {
+            #     "layerType": "span",
+            #     "anchoring": {"stream": True, "time": False, "location": False},
+            #     "attributes": {
+            #         "rend": {
+            #             "type": "categorical",
+            #             "nullable": True,
+            #             "values": ["sup"],  # Add more values
+            #         },
+            #     },
+            # },
             "Choice": {
                 "layerType": "span",
                 "anchoring": {"stream": True, "time": False, "location": False},
