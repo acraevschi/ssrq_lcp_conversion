@@ -1,0 +1,192 @@
+{
+    "meta": {
+        "name": "SSRQ Corpus",
+        "author": "placeholder",
+        "corpusDescription": "placeholder",
+        "date": "placeholder",
+        "url": "placeholder",
+        "version": 1
+    },
+    "firstClass": {
+        "token": "Word",
+        "segment": "Sentence",
+        "document": "Document"
+    },
+    "layer": {
+        "Word": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "unit",
+            "attributes": {
+                "form": {
+                    "type": "text",
+                    "nullable": false
+                }
+            }
+        },
+        "Sentence": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "span",
+            "attributes": {
+                "original": {
+                    "type": "text",
+                    "nullable": false
+                }
+            },
+            "contains": "Word"
+        },
+        "Document": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "span",
+            "attributes": {
+                "title": {
+                    "type": "text",
+                    "nullable": false
+                },
+                "editors": {
+                    "type": "labels",
+                    "nullable": true,
+                    "nlabels": 2
+                },
+                "date_electronic": {
+                    "type": "categorical",
+                    "nullable": false,
+                    "values": [
+                        "2018-12-12",
+                        "2019-03-20",
+                        "2019-10-14",
+                        "2017",
+                        "2020-09-22",
+                        "2020-11-24"
+                    ]
+                },
+                "date_print": {
+                    "type": "categorical",
+                    "nullable": false,
+                    "values": [
+                        "2022-06-10"
+                    ]
+                },
+                "origdate": {
+                    "type": "text",
+                    "nullable": true
+                },
+                "canton": {
+                    "type": "categorical",
+                    "nullable": false,
+                    "values": [
+                        "FR"
+                    ]
+                }
+            },
+            "contains": "Sentence"
+        },
+        "Placename": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "unit",
+            "attributes": {
+                "text": {
+                    "type": "text",
+                    "nullable": false
+                },
+                "ref": {
+                    "type": "text",
+                    "nullable": true
+                }
+            }
+        },
+        "Persname": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "unit",
+            "attributes": {
+                "text": {
+                    "type": "text",
+                    "nullable": false
+                },
+                "ref": {
+                    "type": "text",
+                    "nullable": true
+                }
+            }
+        },
+        "Choice": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "unit",
+            "attributes": {
+                "alternativetext": {
+                    "type": "text",
+                    "nullable": false
+                }
+            }
+        },
+        "Orgname": {
+            "anchoring": {
+                "stream": true,
+                "time": false,
+                "location": false
+            },
+            "layerType": "unit",
+            "attributes": {
+                "text": {
+                    "type": "categorical",
+                    "nullable": false,
+                    "values": [
+                        "clarisses",
+                        "R\u00e4mi",
+                        "R\u00e4minen",
+                        "Riminen",
+                        "Rimmys",
+                        "Auterive",
+                        "Cappucyneren",
+                        "Barf\u00fcsser",
+                        "abbaye des Chappuis",
+                        "Jesus",
+                        "Bifrare",
+                        "Haulterive"
+                    ]
+                },
+                "ref": {
+                    "type": "categorical",
+                    "nullable": false,
+                    "values": [
+                        "org001028",
+                        "org004722.02",
+                        "org004722.04",
+                        "org004722.05",
+                        "org004802.07",
+                        "org001027",
+                        "org006679",
+                        "org004814.02",
+                        "org001675.05",
+                        "org007513.03",
+                        "org004802.06",
+                        "org001675.07"
+                    ]
+                }
+            }
+        }
+    }
+}

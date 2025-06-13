@@ -1,0 +1,762 @@
+text_id,text
+1,Frybourg
+2,Vacheresse
+3,Berney
+4,Larrengez
+5,Moudon
+6,Larrenjoz
+7,Buaz
+8,Vernaz
+9,Morlon
+10,Fryburg
+11,Wulckischwyl
+12,Treffels
+13,Galgenberg
+14,Jaquemard
+15,Wattemwyl
+16,Berfitschriedt
+17,Wattenwyll
+18,Berner
+19,Velgaschür
+20,Felgenschür
+21,bösen thurn
+22,Mesieres
+23,Keller
+24,schewr
+25,Brauch
+26,Bruch
+27,Bernthor
+28,Tavers
+29,Velgaschüer
+30,scheür
+31,Ow
+32,Menzißwyl
+33,S. Wolffgang
+34,Rychengassen
+35,bosen thurn
+36,Montenach
+37,Dompierre
+38,Wistellachen
+39,bösen turn
+40,Domppierre
+41,Donatire
+42,Lugnouroz
+43,Lunaure
+44,Donatyre
+45,Giffers
+46,Berner thors
+47,Blumenstein
+48,Rosey
+49,Oignon
+50,Onnion
+51,L’Ocle
+52,Savoie
+53,Bourguillon
+54,Verndringen
+55,Hermißberg
+56,Tavel
+57,Uberstorff
+58,Sensen
+59,Mentzißhauß
+60,Wyller
+61,Titzenberg
+62,Müllibach
+63,Ruw
+64,Avanche
+65,Treyvaux
+66,Bysenberg
+67,Grandcourt
+68,Treivaux
+69,Vullie
+70,Montorge
+71,La Maigroge
+72,ge
+73,Solleure
+74,Vivey
+75,Corgy
+76,Corsier
+77,Saincte Clare
+78,Vevey
+79,Niclauß
+80,Solothurn
+81,Rechthaltten
+82,Grandson
+83,Sant Wolffgang
+84,Einsidlen
+85,Rechthalten
+86,Romont
+87,Romond
+88,Remond
+89,Payerne
+90,Anne
+91,Chapelle Sainte-Anne
+92,Bule
+93,Prevonlau
+94,Birlin
+95,Troys Roys
+96,Estavayé
+97,Spinß
+98,Petit Farvagné
+99,Morat
+100,Arconciel
+101,Zug
+102,Corbers
+103,Gryers
+104,Corbieres
+105,La Tour
+106,La Vaux Saincte
+107,Roche
+108,Bellegarde
+109,L’Espara
+110,Charmey
+111,Gruyere
+112,Chastallet
+113,Tissiniva
+114,Gallen
+115,Schwytz
+116,La Roche
+117,Arses
+118,Arches
+119,Corbières
+120,Gugisperg
+121,Guggisperg
+122,Rathhuß
+123,thurn
+124,Jaun
+125,lin
+126,Thurn
+127,Spittal
+128,en Eiglen
+129,Oge
+130,Marlie
+131,Jetschenwyll
+132,Guin
+133,S. Niclaußen
+134,Tidingen
+135,Ottisperg
+136,Berlens
+137,Ballißwyll
+138,Sanen
+139,wyll
+140,Augustinern
+141,Augustinerkirche
+142,Ouw
+143,Brugera
+144,Cugie
+145,Montet
+146,Visin
+147,Cugy
+148,ne
+149,Chastonaye
+150,Brettenach
+151,Villars-sur-Glâne
+152,Nicolas
+153,S. Barthlomé
+154,Bartholomäus Kapelle
+155,Pérolles Kapelle
+156,Bürglen
+157,Eiglen
+158,Ütschenwyll
+159,Ütschenwyl
+160,St. Wolffgang
+161,Chatedex
+162,chasteau de Buloz
+163,Buloz
+164,Disjon
+165,Avry
+166,Avry-devant-Pont
+167,Avry-sur-Matran
+168,Pont
+169,Pont-la-Ville
+170,Pont-en-Ogoz
+171,Avenche
+172,Groley
+173,Monbovon
+174,Chivilliart
+175,Brock
+176,Chivrillie
+177,La Lendaz
+178,Curtipin
+179,Kesenberg
+180,Martran
+181,Moncort
+182,Corbiere
+183,ly
+184,Marly
+185,Aulteville
+186,Auteville
+187,Villarvola
+188,Gumuffin
+189,sch
+190,Murten
+191,Lugnore
+192,Murthen
+193,Guevaux
+194,Gevaux
+195,Cudrefin
+196,Lougnoure
+197,Aulbin
+198,Murtner gebiets
+199,Froumatten
+200,Frauwmatten
+201,Chrischlisperg
+202,Praroman
+203,Vauxtravers
+204,Burguillion
+205,Hospital
+206,Daspurg
+207,berg
+208,Granges
+209,riedt
+210,Bern
+211,biet
+212,Heitenriedt
+213,tenriedt
+214,Noreia
+215,Estavayer le Giblioux
+216,Norea
+217,Noreaz
+218,Ponthoux
+219,Favernach
+220,Champdelard
+221,Estavayer le Gibliaux
+222,Estavayé le Gibloux
+223,Estavayer-le-Gibloux
+224,Fribourg
+225,Denys
+226,bößen thurn
+227,Gibloux
+228,Mauvaise Tour
+229,Überstein
+230,Mignieres
+231,Montenachen
+232,Uberstein
+233,Courevaut
+234,Courgevaux
+235,Chietres
+236,Kertzers
+237,Migniere
+238,Migniri
+239,Cugiez
+240,Croix Blanche
+241,Gletterens
+242,Belfoz
+243,Im Fang
+244,Joun
+245,zur Flüe
+246,Boll
+247,Rochemont
+248,Sibenthal
+249,Flüeland
+250,Ryaz
+251,Italie
+252,Tornier
+253,Chevrod
+254,Villarrippo
+255,Foz
+256,Curtion
+257,Cormeraud
+258,Cursiberlé
+259,Curlevoz
+260,Zandon
+261,Plan
+262,Vernex
+263,Le Vernex
+264,Corlevoz
+265,Chartrossa
+266,Berlin
+267,lens
+268,Notre-Dame de l’Epine
+269,Mentzishuß
+270,St. Ursen
+271,Fawernachen
+272,Felgenschüwr
+273,Schwartzenburg
+274,Altenryff
+275,Semlitzwyll
+276,Römerswil
+277,St. Wollffgang
+278,Spietz
+279,Remitzwyll
+280,Im Port
+281,Saanen
+282,Garmißwyll
+283,Hauterive
+284,Maggeren Auw
+285,Margerau
+286,Saane
+287,gang
+288,Didingen
+289,Spittahl
+290,Räsch
+291,Miserachen
+292,Bartholomes cappellen
+293,Franckhrych
+294,dryen crützen
+295,Düdingen
+296,Galterbach
+297,Thun
+298,Fryenhoffen
+299,holtz
+300,Wyttenbach
+301,Spittall
+302,Spittals
+303,Ottißberg
+304,Taffers
+305,Crummi
+306,Obermontenach
+307,Utschenwyll
+308,Spitthall
+309,Litzestorff
+310,St. Barthlomes capellen
+311,Schöneberg
+312,Tavy
+313,Deley
+314,Muolers
+315,Muller
+316,faux
+317,Muoller
+318,Fillebach
+319,Silvestre
+320,Gyblaux
+321,lettes
+322,Bourgogne
+323,Buchwaldt
+324,Gumma
+325,waldt
+326,fau
+327,Gyffers
+328,Mullerß
+329,Chivirlie
+330,Plasselb
+331,Muollers
+332,Arconcier
+333,Chivirles
+334,Muollere
+335,Füllebach
+336,Geyssale
+337,Geisserli
+338,Muler
+339,krützen
+340,Wolffgang
+341,Bösingen
+342,Corserey
+343,eadem die presente
+344,Arbognes
+345,tignye
+346,Prez
+347,Torny
+348,Lentignie
+349,Lentignye
+350,La Vuad
+351,Chavannes soubz Romond
+352,Montaignye
+353,benoist crucifix de Belfolz
+354,Murthentohr
+355,Besançon
+356,Sensales
+357,Nostre Dame des Hermites
+358,Im bösen thurn
+359,Dompieru
+360,En Nonnes
+361,Es Nonnes
+362,Montagnye
+363,Barbereche
+364,Cressyé
+365,Notre Dame des Ermittes
+366,Corselle
+367,Rappetes
+368,La Rapetta
+369,Corcelles-près-Payerne
+370,Pontau
+371,Montagniez
+372,Montagni
+373,Lac de Morrat
+374,Surpierre
+375,Chapelle
+376,Prevondavaux
+377,Mignyre
+378,Ratshus
+379,Milden
+380,Cheiri
+381,Ceirye
+382,Lyon
+383,Rue
+384,Ceiry
+385,La Beauma
+386,Grand Hospital
+387,Mouldon
+388,Chappelle
+389,pierre
+390,ce
+391,Sabvoye
+392,Noreyaz
+393,Genes
+394,Allemagne
+395,Talliences
+396,Wippingenn
+397,Geneve
+398,Sorin
+399,Assillietes
+400,Girinio
+401,Chant des Apralles
+402,La Verna
+403,La Verne
+404,Vuippens
+405,Grangetes
+406,Wippingen
+407,Vuistarnens
+408,Fawernach
+409,Villarsel le Gybliaux
+410,Achilletes
+411,Farvagnye
+412,Clouds Riouds
+413,nens
+414,Aschillettes
+415,nye
+416,Aschilletes
+417,Orsonnens
+418,Villarlod
+419,Gybliaux
+420,Ryouds
+421,Clouds Ryouds
+422,Rome
+423,Chastel Crisou
+424,Farvagnie
+425,Chastel Crysoud
+426,Vuisternens devant Pont
+427,Marsens
+428,Vuisternens
+429,Villarsel le Gyblaux
+430,sternens
+431,Corsallez
+432,son
+433,nens devant Pont
+434,Ryat
+435,Villardsiviriaux
+436,Farvagny
+437,Hospitaux devant
+438,Rayes de Ryoud
+439,Clos Roux
+440,Chenalletes
+441,La Chenaletta
+442,Käller
+443,Walriß
+444,Wallriß
+445,Les Places
+446,Gumuffens
+447,Walryß
+448,Places
+449,in
+450,porte de Bourguillon
+451,Gumefens
+452,Gumufens
+453,Villariat
+454,Crotton
+455,Corbierez
+456,Iverdon
+457,La Sauge
+458,Sorrens
+459,Farvagnier
+460,Massonens
+461,Combes
+462,Massonnens
+463,Girnilles
+464,Chavanes
+465,Chavannes sous Orsonnens
+466,Remont
+467,Villaz
+468,Villaz-Saint-Pierre
+469,Chartreuse
+470,La Valsainte
+471,Villar Gyroud
+472,viriaux
+473,Villa
+474,Notre Dame de Bourguillon
+475,Loup
+476,didier
+477,Villargyroud
+478,de Cottin
+479,Mischleren
+480,Überstorff
+481,Kürse
+482,Chandon le Crouz
+483,Olleyre
+484,L’Eschellez
+485,Monthenach
+486,Montagnyez
+487,Craux
+488,Creux du Loup
+489,Bubberonds
+490,La Razy
+491,La Ragia
+492,Gets
+493,Losanne
+494,Chandon
+495,Chandon le Craux
+496,Magnudens
+497,Posa
+498,Lentenach
+499,Chenens
+500,Manedens
+501,Escuvilin
+502,Lentini
+503,Torni
+504,Uzes
+505,Farvagni
+506,Manedins
+507,vagni
+508,Ottigni
+509,Ottini
+510,Manedin
+511,villin
+512,Farvani
+513,ès Uzes
+514,Rone
+515,Les Usses
+516,Rhône
+517,Seyssel
+518,Estavaié
+519,Neiru
+520,Le Moulin
+521,Chennens
+522,Estavayé le Gyblaux
+523,Possa
+524,Posaz
+525,Zeinin
+526,Estavaié le Lac
+527,Corscherey
+528,Granges a Ferlin
+529,anedens
+530,Magnedens
+531,Zeinens
+532,Grandsheva
+533,Zolets thurn
+534,Missiez
+535,Willarreppoz
+536,Zinizachen
+537,Willarrepo
+538,Villarrepoz
+539,Rupertsweil
+540,Wifflispurg
+541,Böse Turm
+542,Freiburger Spital
+543,Niweneg
+544,Autafont
+545,Fouz
+546,Escher
+547,Vivis
+548,Courtaman
+549,Wistenlach
+550,Neufchastel
+551,Tavyz
+552,Savoy
+553,Neufchatel
+554,Svartzenbourg
+555,Cauglerera
+556,Tavi
+557,Schwartzenbourg
+558,zu Halten
+559,burg
+560,Chapelle Saint-Jacques
+561,Saint-Jacques-de-Compostelle
+562,by dem Fahl
+563,Willer
+564,rynißheltzli
+565,Spitall
+566,affers
+567,Barrata
+568,Walliß
+569,Mezgera
+570,Tentering
+571,Pradervan
+572,Montagnier
+573,Mezgeraz
+574,Rysus Milli
+575,la Barrataz
+576,Tentlingen
+577,Jacob
+578,Sant Jacob
+579,Compostel
+580,Reyssus Mülli
+581,bim den Fahl
+582,Berg
+583,este
+584,bey dem Fahl
+585,Wabern
+586,Nüwenburg
+587,Couvet
+588,Vauldtravert
+589,Berne
+590,Kreitzgassen
+591,pays de Berne
+592,Lé Places
+593,porte des Estans
+594,Nüwenburger gebieths
+595,Ensishein
+596,Engesen
+597,In der hart
+598,Auf der Hardt
+599,Fribourg-en-Brisgau
+600,Bahle
+601,dernier
+602,Cheval blanc
+603,College
+604,Biene
+605,Colmar
+606,Bougan
+607,Soleure
+608,porte de Romont
+609,Nidauw
+610,Zurich
+611,Liechstel
+612,Roseys
+613,Buchwaldts
+614,Eischels
+615,Plaßelb
+616,Courtaney
+617,Cortaney
+618,Fälbach
+619,genberg
+620,Fehlbach
+621,Plaselb
+622,Muschels
+623,Rechthaltner
+624,Welschlandt
+625,Romandie
+626,Tchabel
+627,Vadens
+628,Bulle
+629,Grolley
+630,Ria
+631,Jagimar
+632,Lehn
+633,Güffers
+634,Wallißlandt
+635,Constantzer
+636,Galmis
+637,Galmiz
+638,Bürglenthor
+639,er
+640,sperg
+641,Mertenlach
+642,Eichholtz
+643,Retschwill
+644,Röschiwil
+645,Golmetschwill
+646,Golmetschür
+647,Hattenberg
+648,Tscherlun
+649,Petterlingen
+650,Myddes
+651,Myde
+652,Chatonaye
+653,Thorni
+654,Remondt
+655,Bruyere
+656,heylligen Römischen rychs
+657,Gallgenbergs
+658,Middes
+659,La Condemina
+660,en Mobrysson
+661,bergs
+662,Mides
+663,Tornie
+664,Echieles
+665,Lechieles
+666,Laurent
+667,Visternens
+668,Visternes
+669,Vuisternens-en-Ogoz
+670,Aisellettes
+671,Sorens
+672,Assilietes
+673,Favernachen
+674,Villarsel
+675,Freydevilla
+676,Chermey
+677,Plaffeyen
+678,von Eynsidlen
+679,Mark
+680,Eynsidlen
+681,Stockera
+682,Taspers
+683,Hermesperg
+684,Tasberg
+685,Hermisberg
+686,Haßli
+687,Endlibuch
+688,Unser Lieben Frauwen von Werdenstein
+689,Loch
+690,Jacquemart
+691,keller
+692,Rothenthurns
+693,La Tour de Treima
+694,Jasquemard
+695,Augstthall
+696,Val d’Aouste
+697,S. Petters
+698,Aoustaz
+699,Erbei
+700,Bruil
+701,Maules
+702,Sales
+703,Jasquimar
+704,Nonnan
+705,Dame des Hermites
+706,Lucerne
+707,Matran
+708,Mattran
+709,Moncourt
+710,Montcour
+711,Montcours
+712,Anthoine
+713,Chapelle Saint-Antoine
+714,Matrans
+715,Neyru
+716,Dompdidier
+717,Moncour
+718,Marli
+719,des Oyes
+720,Marze
+721,Les Marches
+722,Bois du Pont
+723,Pont Neuf
+724,Marchet
+725,Creu de Ratt
+726,Creu Dornant
+727,Glaina
+728,Domp Pieru
+729,Rahthauß
+730,Jaggimar
+731,ome
+732,Zollets thurn
+733,rive
+734,Farvanier
+735,à La Bouzilli
+736,Rue des Oyes
+737,Couttin
+738,Verdilu
+739,Verdillu
+740,Verdelieu
+741,Eccuvilin
+742,Belfu
+743,Lussi
+744,Lé Plases
+745,zum Weissen Rössli
+746,schmachporten
+747,Zeirru
+748,es Granges à Paccot
+749,Rossey
+750,Avri
+751,Neyruz
+752,Cutrivi
+753,Purraban
+754,Bourgonie
+755,Port Alban
+756,Cutrivy
+757,Pont neuf
+758,Barberezi
+759,Jasque
+760,Moncor
+761,an
